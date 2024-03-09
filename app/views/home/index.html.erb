@@ -1,3 +1,7 @@
 <div>
-  <h1 class="underline">Hallo, <%= current_user.name %></h1>
+  <% if user_signed_in? %>
+    <h1 class="underline">Hallo, <%= current_user.name %></h1>
+  <% else %>
+    <h1 class="underline">Hallo, Guest</h1>
+  <% end %>
 </div>
